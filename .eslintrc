@@ -1,0 +1,98 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": ["airbnb-base", "plugin:@typescript-eslint/recommended", "prettier", "prettier/@typescript-eslint"],
+  "ignorePatterns": ["coverage/", "lib/", "docs/", "node_modules/"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "simple-import-sort",
+    "sort-destructure-keys",
+    "sort-keys-fix",
+    "prettier"
+  ],
+  "rules": {
+    "allowForLoopAfterthoughts": 0,
+    "arrow-body-style": [2, "as-needed"],
+    "arrow-parens": ["error", "as-needed"],
+    "comma-dangle": ["error", "only-multiline"],
+    "function-paren-newline": "off",
+    "import/extensions": ["error", "never", { "json": "always" }],
+    "import/first": "error",
+    "import/named": 0,
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": "error",
+    "import/prefer-default-export": 0,
+    "indent": [
+      2,
+      2,
+      {
+        "ArrayExpression": 1,
+        "ObjectExpression": 1,
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": 0,
+    "max-len": [
+      2,
+      240,
+      4,
+      {
+        "ignoreStrings": true,
+        "ignoreUrls": true
+      }
+    ],
+    "no-console": 0,
+    "no-param-reassign": "off",
+    "prefer-destructuring": [
+      "error",
+      {
+        "array": true,
+        "object": false
+      }
+    ],
+    "prettier/prettier": "error",
+    "simple-import-sort/sort": "error",
+    "sort-destructure-keys/sort-destructure-keys": [2, { "caseSensitive": true }],
+    "sort-imports": "off",
+    "sort-keys": [
+      "error",
+      "asc",
+      {
+        "caseSensitive": true,
+        "minKeys": 2,
+        "natural": true
+      }
+    ],
+    "sort-keys-fix/sort-keys-fix": "warn",
+    "sort-vars": [
+      "error",
+      {
+        "ignoreCase": true
+      }
+    ]
+  },
+  "settings": {
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".js", ".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "directory": "./tsconfig.json"
+      }
+    }
+  }
+}

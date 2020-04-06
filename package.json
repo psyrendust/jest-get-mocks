@@ -1,0 +1,57 @@
+{
+  "name": "jest-get-mocks",
+  "version": "0.0.0",
+  "description": "Recursively find mocks in your source code for your projects Jest config",
+  "keywords": [
+    "jest",
+    "mocks"
+  ],
+  "homepage": "https://github.com/psyrendust/jest-get-mocks#readme",
+  "bugs": {
+    "url": "https://github.com/psyrendust/jest-get-mocks/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psyrendust/jest-get-mocks.git"
+  },
+  "license": "MIT",
+  "author": "Larry Gordon <lgordon@psyrendust.com>",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "tsc",
+    "fix": "yarn lint:source --fix && yarn lint:config --write && yarn lint:demo --fix",
+    "lint": "yarn lint:source && yarn lint:config && yarn lint:demo",
+    "lint:config": "prettier '*.{json,md}' '*/**/*.{json,md}' 'package.json' --ignore-path .gitignore --check",
+    "lint:demo": "eslint 'demo/**/*.js' --ignore-path .gitignore",
+    "lint:source": "eslint 'src/**/*.{js,ts,tsx}' '*.js' '.*.js' --ignore-path .gitignore",
+    "prepare": "yarn build && yarn test",
+    "tdd": "yarn test --watch --coverage=false",
+    "test": "yarn test:demo && yarn test:src",
+    "test:demo": "cd demo && yarn test",
+    "test:src": "jest ./src"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.11.0",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-simple-import-sort": "^5.0.2",
+    "eslint-plugin-sort-destructure-keys": "^1.3.3",
+    "eslint-plugin-sort-keys-fix": "^1.1.0",
+    "jest": "^25.2.7",
+    "prettier": "^2.0.4",
+    "prettier-plugin-packagejson": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8.3",
+    "uuid": "^7.0.3"
+  }
+}

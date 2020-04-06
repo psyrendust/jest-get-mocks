@@ -1,0 +1,13 @@
+{
+  "name": "demo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "tdd": "yarn test --watch",
+    "test": "jest ./src"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`assignMocks should overwrite the destination 1`] = `
+Object {
+  "a": "aaa",
+  "b": "bbb",
+  "c": "ccc",
+  "d": "ddd",
+}
+`;
+
+exports[`assignMocks should returned an assigned object 1`] = `
+Object {
+  "a": "aaa",
+  "b": "bbbbbb",
+  "c": "ccc",
+  "d": "ddd",
+}
+`;
+
+exports[`assignMocks should warn if overwriting the destination 1`] = `
+Object {
+  "a": "aaa",
+  "b": "bbbbbb",
+  "c": "ccc",
+  "d": "ddd",
+}
+`;
+
+exports[`flatten should flatten a multi-dimensional array 1`] = `
+Array [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+]
+`;
+
+exports[`getGlobalMocks should return a MockPairs object of global modules 1`] = `
+Object {
+  "fs": "<rootDir>/src/__mocks__/fs",
+  "uuid": "<rootDir>/src/__mocks__/uuid",
+}
+`;
+
+exports[`getMockFiles should return a MockPairs object 1`] = `
+Array [
+  Array [
+    "src/__mocks__/fs.js",
+    "src/__mocks__/uuid.js",
+  ],
+  "src/index.js",
+  "src/index.spec.js",
+  Array [
+    Array [
+      "src/utils/__mocks__/now.js",
+    ],
+    "src/utils/get-id.js",
+    "src/utils/get-id.spec.js",
+    "src/utils/now.js",
+    "src/utils/now.spec.js",
+  ],
+]
+`;
+
+exports[`getRelativeMocks should return a MockPairs object of relative modules 1`] = `
+Object {
+  "\\\\/now$": "<rootDir>/src/utils/__mocks__/now",
+}
+`;
+
+exports[`getRelativeMocks should return an empty MockPairs object with wrong excludeFiles 1`] = `Object {}`;
+
+exports[`getRelativeMocks should return an empty MockPairs object with wrong moduleFileExtension 1`] = `Object {}`;
+
+exports[`jestGetMocks should return a MockPairs object with globals 1`] = `
+Object {
+  "\\\\/now$": "<rootDir>/src/utils/__mocks__/now",
+  "fs": "<rootDir>/src/__mocks__/fs",
+  "uuid": "<rootDir>/src/__mocks__/uuid",
+}
+`;
+
+exports[`jestGetMocks should return a MockPairs object without globals 1`] = `
+Object {
+  "\\\\/now$": "<rootDir>/src/utils/__mocks__/now",
+}
+`;
+
+exports[`makeModulePairs should return a MockPairs object of global modules 1`] = `
+Object {
+  "fs": "<rootDir>/src/__mocks__/fs",
+  "uuid": "<rootDir>/src/__mocks__/uuid",
+}
+`;
+
+exports[`makeRelativePairs should return a MockPairs object of relative modules 1`] = `
+Object {
+  "\\\\/get-id$": "<rootDir>/src/utils/get-id",
+  "\\\\/get-id.spec$": "<rootDir>/src/utils/get-id.spec",
+  "\\\\/index$": "<rootDir>/src/index",
+  "\\\\/index.spec$": "<rootDir>/src/index.spec",
+  "\\\\/now$": "<rootDir>/src/utils/now",
+  "\\\\/now.spec$": "<rootDir>/src/utils/now.spec",
+}
+`;
