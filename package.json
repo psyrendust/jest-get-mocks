@@ -1,6 +1,6 @@
 {
   "name": "jest-get-mocks",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Recursively find mocks in your source code for your projects Jest config",
   "keywords": [
     "jest",
